@@ -43,7 +43,6 @@ function Mostrar()
 			pesomax=peso;
 			tempmin=temperatura;
 			tempmax=temperatura;
-			animalfrio=nombre;
 		}
 		else{ 
 			if(peso>pesomax){

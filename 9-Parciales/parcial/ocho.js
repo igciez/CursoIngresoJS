@@ -21,10 +21,11 @@ function Mostrar()
 	var cantemp=0;
 	var acumulador=0;
 	var animalfrio;
+	var animalpeso;
 
 	while(true){
 
-		nombre=prompt("Ingrese el nombre del animal: ");
+		nombre=prompt("Ingrese el nombre del animal (para salir 'cancelar'): ");
 		if(nombre==null){
 				break;
 		}
@@ -46,13 +47,14 @@ function Mostrar()
 		}
 		else{ 
 			if(peso>pesomax){
-				pesomax=peso+""+nombre;
+				pesomax=peso;
+				animalpeso=nombre;
 			}
 			if(temperatura<tempmin){
 				tempmin=temperatura;
 				animalfrio=nombre;
 			}
-			if (temperatura>tempmax){
+			else if (temperatura>tempmax){
 				tempmax=temperatura;
 			}
 			if(temperatura%2==0){
@@ -62,6 +64,6 @@ function Mostrar()
 		acumulador+=peso;
 		contador++;
 	}
-	document.write("<br>El nombre del animal mas pesado es: "+pesomax+ "<br> Animal con temperatura mas baja: "+animalfrio+ "<br> Temperatura minima: "+tempmin+ "<br> Promedio de todos los animales: "+(acumulador/contador)+"<br> Temperatura maxima y minima: "+tempmax+"y "+tempmin)
+	document.write("<br>El animal mas pesado es: "+animalpeso+ "<br> Animal con temperatura mas baja: "+animalfrio+ "<br> Temperatura minima: "+tempmin+ "<br> Promedio del peso de todos los animales: "+(acumulador/contador)+"<br> Temperatura maxima y minima: "+tempmax+" y "+tempmin);
 
 }

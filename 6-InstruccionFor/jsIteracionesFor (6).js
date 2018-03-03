@@ -1,7 +1,6 @@
 function Mostrar()
 {
 	var numpares;
-	var acumpares=0;
 	var numero; 
 	var cantpares=0;
 	
@@ -12,16 +11,12 @@ function Mostrar()
 	}
 	
 	for(contador=1;contador<=numero;contador++){
-		if(contador%2&&contador!=0){
+		if(contador%2==0&&contador!=0){
 			cantpares++;
+			document.write("<br>Numeros pares desde el 1 al número ingresado: "+contador);
 		}
-		numpares=contador%2;
-		acumpares+=numpares;
-		
 	}
 
-
-	document.write("<br>Numeros pares desde el 1 al número ingresado: "+acumpares);
 	document.write("<br>Cantidad de numeros pares encontrados "+cantpares);
 	
 

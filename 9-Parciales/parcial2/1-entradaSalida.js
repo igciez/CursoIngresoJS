@@ -1,7 +1,15 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	alert("Funciona 1-EntradaSalida");
+	var triangulo;
+	var perimetro;
+
+	triangulo=document.getElementById('lado').value;
+	triangulo=parseInt(triangulo);
+	perimetro=triangulo*3
+
+
+	alert("Funciona 1-EntradaSalida  "+  perimetro);
 	
 }
 
